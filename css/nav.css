@@ -11,12 +11,17 @@
  
 .nav{
     width: 100%;
+    min-width: 850px;
     height: 5rem;
     background-color: #0F1822;
     display: flex;
     color: white;
     align-items: center;
     justify-content: space-around;
+}
+
+.logo-container{
+  width: 192px;
 }
 
 .nav-logo{
@@ -30,7 +35,6 @@
     font-size: 40px;
     color: #FF4654;
     letter-spacing: 10px;
-    margin-left: 8rem;
     font-weight: 500;
 }
 
@@ -39,6 +43,7 @@
     padding: 0;
     text-transform: uppercase;
 }
+
 
 
 /* Boton nav */
