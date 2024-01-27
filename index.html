@@ -1,16 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    
 
+<body>
+    <div class="mainContainer">
+        <div class="container">
+            <button id="btn1" onclick="showBtn()">
+                <div class="label">
+                    <span class="hover-effect"></span>
+                    <span class="label-text">CLICK PARA COMENZAR</span>
+                </div>
+            </button>
+        </div>
+        <div class="container-1">
+            <button class="outline" id="btn2">
+                <div class="label">
+                    <span class="hover-effect"></span>
+                    <a class="label-text small-label" href="agentes.html">
+                    AGENTES</a>
+                </div>
+            </button>
+            <button class="outline" id="btn3">
+                <div class="label">
+                    <span class="hover-effect"></span>
+                    <a class="label-text small-label" href="armas.html">
+                    ARMAS</a>
+                </div>
+            </button>
+        </div>
+
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/btn.js"></script>
 </body>
+
 </html>

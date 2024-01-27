@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Valorant";
+    src: url("Valorant.otf");
+}
+
+@font-face {
+    font-family: "DIN Next LT Pro Bold";
+    src: url("//db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.eot");
+    src: url("//db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.eot?#iefix") format("embedded-opentype"),
+        url("//db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.woff2") format("woff2"),
+        url("//db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.woff") format("woff"),
+        url("//db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.ttf") format("truetype"),
+        url("//db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.svg#DIN Next LT Pro Bold") format("svg");
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+    background-image: url("../IMG/VALORANT_1.png");
+    width: 100%;
+    height: 100dvh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.mainContainer{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    height: 18%;
+    width: auto;
+    align-content: flex-end;
+}
+
+.container-1 {
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+    height: 100px;
+}
+
+button {
+    font-family: "DIN Next LT Pro Bold";
+    font-weight: 400;
+    width: 40%;
+    margin-bottom: 3rem;
+    position: relative;
+    display: block;
+    font-size: 1.9rem;
+    padding: 0.7rem;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    color: #ece8e1;
+}
+
+button:hover {
+    color: #ece8e1 !important;
+}
+
+button::before,
+button::after {
+    background-color: transparent;
+    content: "";
+    display: block;
+    position: absolute;
+    height: calc(50% - 0.4rem);
+    width: 100%;
+    border: 1px solid rgba(236, 232, 225, 0.5);
+    left: 0;
+}
+
+button::before {
+    border-bottom: 0;
+    top: 0;
+}
+
+button::after {
+    border-top: 0;
+    bottom: 0;
+}
+
+.label {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+}
+
+.label:before {
+    content: "";
+    height: 100%;
+    display: block;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+
+.hover-effect {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 120%;
+    top: 0;
+    left: -5%;
+    z-index: 1;
+    background-color: #ff4655;
+    transform: translateX(-100%) skew(-10deg);
+    transition: -webkit-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+  }
+  
+  button:hover .hover-effect {
+    transform: translateX(0) skew(-10deg);
+  }
+  
+  /* Label Text */
+  .label-text {
+    position: relative;
+    display: block;
+    padding: 1.9rem 3rem;
+    background-color: transparent;
+    z-index: 1;
+  }
+  
+.small-label{
+    padding: 1%;
+}
+
+  .label-text:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 0.6rem;
+    width: 0.6rem;
+    right: 0;
+    bottom: 0;
+    background-color: #0f1923;
+    transition: background-color 0.2s ease-in;
+  }
+  button:hover .label-text:after {
+    background-color: #ece8e1;
+  }
+
+#btn1 {
+    color: #0f1923;
+    width: 500px;
+}
+
+#btn1 .label::before {
+    background-color: #ece8e1;
+  }
+
+  #btn2, #btn3{
+    height: 60px;
+    display: none;
+  }
+
+a{
+    text-decoration: none;
+    color: #ece8e1;
+}
+
+a:visited{
+    color: #ece8e1;
+}
+
+  .outline {
+    color:  #ece8e1;
+  }
+  
+  .outline .label::before,
+  .outline .label::after {
+    border: 1px solid rgba(236, 232, 225, 0.5) !important;
+  }
+
+  
