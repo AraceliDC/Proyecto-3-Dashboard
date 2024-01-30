@@ -1,0 +1,7 @@
+.main-container{
+    display: flex;
+    height: calc(100vh - 80px);
+    width: 100vw;
+    background-color: brown;
+    padding: 1.5rem;
+}
