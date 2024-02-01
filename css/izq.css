@@ -1,7 +1,71 @@
+@font-face {
+    font-family: "DIN Next LT Pro Bold";
+    src: url("//db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.eot");
+    src: url("//db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.eot?#iefix") format("embedded-opentype"),
+      url("//db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.woff2") format("woff2"),
+      url("//db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.woff") format("woff"),
+      url("//db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.ttf") format("truetype"),
+      url("//db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.svg#DIN Next LT Pro Bold") format("svg");
+  }
+
 .main-container{
     display: flex;
     height: calc(100vh - 80px);
     width: 100vw;
     background-color: brown;
     padding: 1.5rem;
+    font-family: "DIN Next LT Pro Bold";
 }
+
+.left-container{
+    display: flex;
+    height: 87vh;
+    width: 50%;
+    background-color: rgb(241, 241, 241);
+    justify-content: center !important;
+  }
+
+  .top-btn {
+    display: inline-block;
+    width: auto;
+    border: 1px solid rgba(15, 25, 35, 0.4);
+    padding: 6px;
+  }
+    .dropdown {
+        cursor: pointer;
+        position: relative;
+        padding: 18px 60px;
+        display: block;
+        /*min-width: 200px;
+        height: 50px;*/
+        overflow: hidden;
+        color: white;
+        background-color: #ff4654;
+    }
+
+    .button-mask:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -5%;
+        width: 130%;
+        height: 100%;
+        background-color: #0f1923;
+        transform: translateX(-100%) skew(-15deg);
+        transition: transform 0.4s ease;
+    }
+
+    .button-mask:hover:before {
+        transform: translateX(0) skew(-15deg);
+    }
+
+    .button-mask span {
+        position: relative;
+        z-index: 1;
+    }
+
+    .dropdown-content{
+        display: none;
+    }
+
