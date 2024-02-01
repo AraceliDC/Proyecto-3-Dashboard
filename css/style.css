@@ -207,3 +207,32 @@ a:visited {
 .outline .label::after {
   border: 1px solid rgba(236, 232, 225, 0.5) !important;
 }
+
+/* MEDIA QUERYS */
+
+/* 1300px */
+@media (max-width: 1366px) {
+
+
+  body{
+    overflow: hidden;
+  }
+  .mainContainer{
+    margin-top: 70px;
+  }
+
+   .label-text {
+       padding: 0.2rem 0.5rem; 
+   }
+  
+   #btn2, #btn3{
+      height: 50px;
+      font-size: 1.2rem;
+   }
+
+   .open{
+    opacity: 1;
+    visibility: visible;
+    top: -40px;
+   }
+}
