@@ -26,32 +26,28 @@
 
 <div class="main-container">
    <div class="left-container">
-      <a href="" class="button-wpn">
+      <a href="" class="button-wpn" onclick="fetchWeapon()">
          <p class="button-content">
-            <span class="text">ARMAS</span>
+            <span class="text" id="armas" onclick="fetchWeapon()">ARMAS</span>
          </p>
       </a>
-      <!-- <div class="top-btn">
-         <button class="top-button">ARMAS</button>
-         <div class="dropdown-content">
-            <p>Stinger</p>
-         </div>
-      </div> -->
-     
+     <div class="despliegue-armas" id="despliegue-armas">
+
+     </div>
       <div class="image-wpn">
    
       </div>
       <div class="name-wpn">
-   
+         
       </div>
     </div>
 
     <div class="right-container">
-      
+
     </div>
 </div>
 
-
- <script src="js/weapon.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="js/armas.js"></script>
 </body>
 </html>
