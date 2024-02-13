@@ -1,57 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/nav.css">
-    <link rel="stylesheet" href="./css/izq.css">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="./css/nav.css">
+   <link rel="stylesheet" href="./css/izq.css">
 </head>
+
 <body>
-     <!-- nav -->
+   <!-- nav -->
    <nav class="nav">
-    <div class="logo-container">
-      <a href="index.html"><img src="./IMG/logo.jpg" alt="logo" class="nav-logo"></a>
-    </div>
+      <div class="logo-container">
+         <a href="index.html"><img src="./IMG/logo.jpg" alt="logo" class="nav-logo"></a>
+      </div>
 
-    <p class="nav-title">v<span class="span">a</span>lorant</p>
-    <a href='agentes.html' class="button">
-       <p class="btn-content">
-         <span></span>
-         <span class="background"></span>
-         <span class="text">AGENTES</span>
-       </p>
-    </a>
- </nav>
-
-<div class="main-container">
-   <div class="left-container">
-      <a href="" class="button-wpn">
-         <p class="button-content">
-            <span class="text">ARMAS</span>
+      <p class="nav-title">v<span class="span">a</span>lorant</p>
+      <a href='agentes.html' class="button">
+         <p class="btn-content">
+            <span></span>
+            <span class="background"></span>
+            <span class="text">AGENTES</span>
          </p>
       </a>
-      <!-- <div class="top-btn">
-         <button class="top-button">ARMAS</button>
-         <div class="dropdown-content">
-            <p>Stinger</p>
+   </nav>
+
+   <div class="main-container">
+      <div class="left-container">
+         <div class="search-weapon">
+            <input type="text" id="weapons" placeholder="Ejemplo: Vandal">
+            <button class="button-content" onclick="fetchWeapon()">BUSCADOR DE ARMAS</button>
          </div>
-      </div> -->
-     
-      <div class="image-wpn">
-   
-      </div>
-      <div class="name-wpn">
-   
-      </div>
-    </div>
-
-    <div class="right-container">
       
-    </div>
-</div>
+         <div class="image-wpn">
+            <img src="" id="weapon-image" alt="">
+         </div>
+         <div class="name-wpn">
 
+         </div>
+      </div>
 
- <script src="js/weapon.js"></script>
+      <div class="right-container">
+
+      </div>
+   </div>
+
+   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+   <script src="js/armas.js"></script>
 </body>
+
 </html>

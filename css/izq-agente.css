@@ -19,26 +19,17 @@
 
 .left-container{
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     height: 100%;
     width: 35%;
-    background-color: #0F1822;
+    background-color: rgb(241, 241, 241);
+    justify-content: center !important;
     margin-right: 3rem;
-
   }
 
-.search-weapon{
-    width: 100%;
-    height: 160px;
-
-    
-}
-
-label{
+.button-wpn{
     padding: 0.5em;
     width: 100%;
-    height: 1em;
+    height: 3em;
     box-shadow: 0 0 0 1.1px inset rgba(255,255,255,1);
     text-align: center;
     text-decoration: none;
@@ -49,40 +40,24 @@ label{
 }
 
 .button-content{
-    font-family: "DIN Next LT Pro Bold";
-    font-size: 18pt;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
     background-color: red;
-    color: white;
-    width: 100%;
-    height: 75px;
-    margin-top: 10px;
-    border: solid red 1px;
-    cursor: pointer;
 }
 
-#weapons{
-    border: red 2px solid;
-    font-family: "DIN Next LT Pro Bold";
-    text-align: center;
-    font-size: 18pt;
-    width: 100%;
-    height: 75px;
-    appearance: none;
-}
-
-.image-wpn{
+.text{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
     width: 100%;
-    height: 67%;
-    background-color: antiquewhite;
-}
-
-.name-wpn{
-    background-color: greenyellow;
-    width: 100%;
-    height: 75px;
+    position: relative;
+    z-index: 4;
+    border: solid 1px red;
+    box-sizing: border-box;
 }
 
 .right-container{
