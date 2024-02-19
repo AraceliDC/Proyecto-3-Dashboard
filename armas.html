@@ -7,6 +7,7 @@
    <title>Document</title>
    <link rel="stylesheet" href="./css/nav.css">
    <link rel="stylesheet" href="./css/izq.css">
+   <link rel="stylesheet" href="./css/der-armas.css">
 </head>
 
 <body>
@@ -30,22 +31,24 @@
       <div class="left-container">
          <div class="search-weapon">
             <input type="text" id="weapons" placeholder="Ejemplo: Vandal">
-            <button class="button-content" onclick="fetchWeapon()">BUSCADOR DE ARMAS</button>
+            <button class="button-content" onclick="fetchWeapon()">BUSCAR</button>
          </div>
       
          <div class="image-wpn">
             <img src="" id="weapon-image" alt="">
          </div>
          <div class="name-wpn">
-
+            <h3 class="name-weapon"></h3>
          </div>
       </div>
 
       <div class="right-container">
-
+            <canvas id="myChart"></canvas>
       </div>
    </div>
-
+   <!-- Script del chart -->
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>   
+   <!-- Fin script chart -->
    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
    <script src="js/armas.js"></script>
 </body>
