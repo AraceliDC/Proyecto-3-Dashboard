@@ -1,8 +1,11 @@
 let weapon = document.getElementById('weapons')
 let button = document.querySelector(".button-content")
 let img = document.getElementById('weapon-image')
+let warningMelee = document.querySelector(".meleeWarning")
 const nameWeapon = document.querySelector(".name-weapon")
 
+
+let chartWeapon;
 
 
 //OBTENER LAS ARMAS POR SU UUID
@@ -13,21 +16,37 @@ const fetchWeapon = async() => {
         const response = await axios.get(WEAPON_UUID_API)
         const weapons = response.data.data
         const mainWeapon = weapons.find(weapon => weapon.displayName === weaponValue)
-     
+
+
         if(mainWeapon){
+
+            if(mainWeapon.displayName == "Melee"){
+                chartWeapon.destroy()
+                warningMelee.style.opacity = 1;
+                warningMelee.style.visibility = "visible"; 
+            } else{
+                warningMelee.style.opacity = 0;
+                warningMelee.style.visibility = "hidden"; 
+            }
+
             console.log(mainWeapon)
             getWeaponImage(mainWeapon)
             getChart(mainWeapon)
             nameWeapon.innerHTML = mainWeapon.displayName
-            
+
+
+           
         }else{
-            alert("Arma no encontrada!")
+            alert("Arma no encontrada!. NOTA: Letra inicial mayuscula")
             console.log("arma no encontrada")
         }
+
+       
 
 
     }catch(error){
         console.error("Ocurrio un error xd ", error)
+       
     }
     document.getElementById('weapons').value = ""
     
@@ -40,17 +59,14 @@ const getWeaponImage = (mainWeapon) =>{
         console.log("ocurrio un error con la imagen", error)
      }
 }
-//USAR MAINWEPON PARA QUE CHART MUESTRE SOLO ESOS DATOS
-
-const rellenarArrayDatos =(mainWeapon)=>{
-    const arrayDatos = [mainWeapon.weaponStats.magazine.magazineSize]
-    console.log(arrayDatos)
-}
-rellenarArrayDatos()
-
 
 const ctx = document.getElementById('myChart');
 const getChart = (mainWeapon)=>{
+
+    if(chartWeapon){
+        chartWeapon.destroy()
+    }
+
     const data = {
         labels: [
           'Daño a Cabeza',
@@ -77,7 +93,9 @@ const getChart = (mainWeapon)=>{
         ]
       };
      try {
-        new Chart(ctx, {
+
+    
+        chartWeapon = new Chart(ctx, {
             type: 'radar',
             data: data,
             options: {
