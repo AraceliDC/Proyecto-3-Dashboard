@@ -30,15 +30,17 @@
    <div class="main-container">
       <div class="left-container">
          <div class="search-weapon">
-            <input type="text" id="weapons" placeholder="Ejemplo: Vandal, Odin, Classic...">
+            <input type="text" id="weapons" placeholder="Ejemplo: Vandal, Melee, Odin, Classic...">
             <button class="button-content" onclick="fetchWeapon()">BUSCAR</button>
          </div>
       
          <div class="image-wpn">
             <img src="" id="weapon-image" alt="">
          </div>
-         <div class="name-wpn">
-            <h3 class="name-weapon"></h3>
+         <div class="border">
+            <div class="name-wpn">
+               <h3 class="name-weapon"></h3>
+            </div>
          </div>
       </div>
 
@@ -46,8 +48,8 @@
             <canvas id="myChart"></canvas>
       </div>
       <div class="meleeWarning">
-         <h3>¡Advertencia!</h3>
-         <p>Melee (cuchillo) no posee datos</p>
+         <h2>¡Advertencia!</h2>
+         <p style="font-size: 14pt;">Melee (cuchillo) no posee datos</p>
       </div>
    </div>
    <!-- Script del chart -->

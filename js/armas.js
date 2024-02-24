@@ -2,7 +2,9 @@ let weapon = document.getElementById('weapons')
 let button = document.querySelector(".button-content")
 let img = document.getElementById('weapon-image')
 let warningMelee = document.querySelector(".meleeWarning")
-const nameWeapon = document.querySelector(".name-weapon")
+let nameWeapon = document.querySelector(".name-weapon")
+let nameWPN = document.querySelector(".name-wpn")
+let borderWPN = document.querySelector(".border")
 
 
 let chartWeapon;
@@ -20,8 +22,24 @@ const fetchWeapon = async() => {
 
         if(mainWeapon){
 
+            if (weaponValue == ""){
+                nameWPN.style.opacity = 0;
+                nameWPN.style.visibility = "hidden";
+                
+                borderWPN.style.opacity = 0;
+                //borderWPN.style.visibility = "hidden";
+
+            }else{
+                nameWPN.style.opacity = 1;
+                nameWPN.style.visibility = "visible";
+                
+                borderWPN.style.opacity = 1;
+                //borderWPN.style.visibility = "visible";
+            }
+
             if(mainWeapon.displayName == "Melee"){
-                chartWeapon.destroy()
+                //chartWeapon.destroy()
+                nameWeapon.innerHTML = "Melee"
                 warningMelee.style.opacity = 1;
                 warningMelee.style.visibility = "visible"; 
             } else{
@@ -37,7 +55,7 @@ const fetchWeapon = async() => {
 
            
         }else{
-            alert("Arma no encontrada!. NOTA: Letra inicial mayuscula")
+            alert("¡Arma no encontrada!. NOTA: Letra inicial en mayúscula")
             console.log("arma no encontrada")
         }
 
@@ -45,7 +63,7 @@ const fetchWeapon = async() => {
 
 
     }catch(error){
-        console.error("Ocurrio un error xd ", error)
+        console.error("Ocurrió un error ", error)
        
     }
     document.getElementById('weapons').value = ""
@@ -63,6 +81,10 @@ const getWeaponImage = (mainWeapon) =>{
 const ctx = document.getElementById('myChart');
 const getChart = (mainWeapon)=>{
 
+    Chart.defaults.font.family = "DIN Next LT Pro Bold";
+    Chart.defaults.font.size = 22;
+    Chart.defaults.color = "white";
+
     if(chartWeapon){
         chartWeapon.destroy()
     }
@@ -76,7 +98,7 @@ const getChart = (mainWeapon)=>{
           'Tiempo de Recarga',
         ],
         datasets: [{
-          label: 'My First Dataset',
+          label: 'Estadísticas del Arma',
           data: [mainWeapon.weaponStats.damageRanges[0].headDamage,
                  mainWeapon.weaponStats.damageRanges[0].bodyDamage,
                  mainWeapon.weaponStats.damageRanges[0].legDamage, 
@@ -105,7 +127,20 @@ const getChart = (mainWeapon)=>{
                             display: false
                         },
                         suggestedMin: 0,
-                        suggestedMax: 300
+                        suggestedMax: 300,
+                        grid: {
+                            color: "white"
+                        },
+                        ticks: {
+                            stepSize: 50,
+                            backdropColor: "#0F1822",
+                            color: "white"
+                        },
+                        pointLabels: {
+                            font: {
+                                size: 20
+                            }
+                        }
                     }
                 },
                 elements: {
