@@ -31,3 +31,5 @@ Finalmente utilizando Chart.js, graficámos automaticamente los datos que necesi
 <img src="IMG/Armas.drawio.png">
 
 #### Link a la página
+
+https://aracelidc.github.io/Proyecto-3-Dashboard/
