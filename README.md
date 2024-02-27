@@ -25,3 +25,9 @@ Finalmente utilizando Chart.js, graficámos automaticamente los datos que necesi
 			
 
 #### WireFrames
+
+<img src="IMG/index.png">
+<img src="IMG/agentes.drawio.png">
+<img src="IMG/Armas.drawio.png">
+
+#### Link a la página
