@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/izq-agente.css">
+    <link rel="stylesheet" href="./css/der-agentes.css">
 </head>
 <body>
    <!-- nav -->
@@ -25,31 +26,45 @@
 
    </nav>
 
-   <div class="error" style="text-align: center; margin-top: 20px;">
+   <!-- <div class="error" style="text-align: center; margin-top: 20px;">
       <h1>PÁGINA EN CONSTRUCCIÓN</h1>
       <h2>Favor redirigirse a armas :D</h2>
       <img src="IMG/404.png" alt="">
-   </div>
-   <!-- <div>
-      <div class="main-container">
-         <div class="left-container">
-            <a href="" class="button-wpn">
-               <p class="button-content">
-                  <span class="text">AGENTES</span>
-               </p>
-            </a>
-            <div class="image-agent">
-         
-            </div>
-            <div class="name-agent">
-               
-            </div>
-          </div>
-      
-          <div class="right-container">
-      
-          </div>
-      </div>
    </div> -->
+   <div class="main-container-agnt">
+      <div class="left-container-agnt">
+         <div class="search-agent">
+            <input type="text" id="agents" placeholder="Ejemplo: Sova, Raze, Jett, Omen...">
+            <button class="button-content-agent" onclick="fetchAgent()">BUSCAR</button>
+         </div>
+      
+         <div class="image-agnt">
+            <img src="" id="agent-image" alt="">
+         </div>
+         <div class="border-agent">
+            <div class="name-agnt">
+               <h3 class="name-agent"></h3>
+            </div>
+         </div>
+      </div>
+
+      <div class="right-container-agent">
+         <div class="rol-container">
+            <h2 class="rol-agent"></h2>
+            <p class="description"></p>
+         </div>
+         <div class="abilities-container">
+            <div class="img-abilities">
+               <img src="" alt="">
+               <p class="abitily-text"></p>
+            </div>
+         </div>
+      </div>
+     
+   </div>
+
+   <!-- Fin script chart -->
+   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+   <script src="js/agentes.js"></script>
 </body>
 </html>

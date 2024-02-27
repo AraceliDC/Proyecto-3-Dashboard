@@ -1,0 +1,51 @@
+@font-face {
+    font-family: "DIN Next LT Pro Bold";
+    src: url("//db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.eot");
+    src: url("//db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.eot?#iefix") format("embedded-opentype"),
+      url("//db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.woff2") format("woff2"),
+      url("//db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.woff") format("woff"),
+      url("//db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.ttf") format("truetype"),
+      url("//db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.svg#DIN Next LT Pro Bold") format("svg");
+  }
+
+.right-container-agent{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.rol-container{
+    /*background-color: red;*/
+    width: 100%;
+    height: 20%;
+    border: solid 1px white;
+    margin-bottom: 20px;
+    opacity: 0;
+
+}
+
+.rol-container h2{
+    color: white;
+    font-size: 2rem;
+    font-family: "DIN Next LT Pro Bold";
+    margin: 10px;
+}
+
+.description{
+    color:white;
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+
+.abilities-container{
+    width: 100%;
+    height: 40%;
+    color: white;
+}
+
+.abilities-container img{
+    width: 5%;
+    margin: 0%;
+    padding: 0;
+}
