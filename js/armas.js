@@ -1,5 +1,3 @@
-//import alertMelee from "./alertMelee"
-
 let img = document.getElementById('weapon-image')
 let warningMelee = document.querySelector(".meleeWarning")
 let nameWeapon = document.querySelector(".name-weapon")
@@ -7,8 +5,6 @@ let nameWPN = document.querySelector(".name-wpn")
 let borderWPN = document.querySelector(".border")
 
 let chartWeapon;
-
-//alertMelee();
 
 //OBTENER LAS ARMAS POR SU UUID
 const fetchWeapon = async() => {
