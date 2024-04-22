@@ -1,21 +1,23 @@
-let weapon = document.getElementById('weapons')
-let button = document.querySelector(".button-content")
+//import alertMelee from "./alertMelee"
+
 let img = document.getElementById('weapon-image')
 let warningMelee = document.querySelector(".meleeWarning")
 let nameWeapon = document.querySelector(".name-weapon")
 let nameWPN = document.querySelector(".name-wpn")
 let borderWPN = document.querySelector(".border")
 
-
 let chartWeapon;
 
+//alertMelee();
 
 //OBTENER LAS ARMAS POR SU UUID
 const fetchWeapon = async() => {
-    let weaponValue = document.getElementById('weapons').value 
+    const weaponValue = document.getElementById('weapons').value 
     try{
+
         const WEAPON_UUID_API = `https://valorant-api.com/v1/weapons`
         const response = await axios.get(WEAPON_UUID_API)
+        
         const weapons = response.data.data
         const mainWeapon = weapons.find(weapon => weapon.displayName === weaponValue)
 
