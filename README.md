@@ -5,6 +5,8 @@ En la aplicación utilizamos la API (Valorant) para obtener datos de los element
 
 Para obtener la información utilizamos axios, axios nos permite realizar peticiones a la API de manera sencilla y con pocas líneas de código y utilizando Try / Catch podemos gestionar los errores y tomar acción en respuesta a estos.
 
+Además se usa la importación de un archivo JS a otro JS para dar una alerta sobre la busqueda de un arma, realizado en la página principal.
+
 Finalmente utilizando Chart.js, graficámos automaticamente los datos que necesitamos en el momento que se solicitan de la API, de esta forma el Cliente podrá ver a tiempo real los datos pertinentes de las armas del juego que desee en un grafico que se genera dinámicamente.
 
 #### Tecnologías utilizadas en el proyecto
