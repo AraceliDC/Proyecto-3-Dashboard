@@ -8,7 +8,8 @@ let chartWeapon;
 
 //OBTENER LAS ARMAS POR SU UUID
 const fetchWeapon = async() => {
-    const weaponValue = document.getElementById('weapons').value 
+    let weaponValue = document.getElementById('weapons').value
+    weaponValue = cleanText(weaponValue)
     try{
 
         const WEAPON_UUID_API = `https://valorant-api.com/v1/weapons`
@@ -52,9 +53,6 @@ const fetchWeapon = async() => {
 
 
            
-        }else{
-            alert("¡Arma no encontrada!. NOTA: Letra inicial en mayúscula")
-            console.log("arma no encontrada")
         }
 
        
@@ -64,7 +62,7 @@ const fetchWeapon = async() => {
         console.error("Ocurrió un error ", error)
        
     }
-    document.getElementById('weapons').value = ""
+    //document.getElementById('weapons').value = ""
     
 }
 
@@ -153,7 +151,12 @@ const getChart = (mainWeapon)=>{
      }
 }
 
-
+const cleanText = (weaponValue) => {
+    weaponValue = weaponValue.replaceAll(" ", "")
+    let result = weaponValue.charAt(0).toUpperCase() + weaponValue.slice(1).toLowerCase()
+    console.log(result)
+    return result
+}
 
 
 

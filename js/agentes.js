@@ -13,6 +13,7 @@ let abilities = document.querySelector('.abilities-container')
 
 const fetchAgent = async() => {
     let agentValue = document.getElementById('agents').value
+    agentValue = cleanText(agentValue)
     try{
         const agent_UUID_API = `https://valorant-api.com/v1/agents`
         responseAgent = await axios.get(agent_UUID_API)
@@ -44,15 +45,12 @@ const fetchAgent = async() => {
             // descriptionAGNT.innerHTML = mainAgent.role.description
             getAbilities(mainAgent.abilities)
             //getRole(mainAgent)
-        }else{
-            alert("¡Agente no encontrado!. NOTA: Letra inicial con mayuscula")
-            console.log("agente no encontrado")
         }
     }catch(error){
         console.error('ocurrio un error ,', error)
     }
 
-    document.getElementById('agents').value = "";
+   // document.getElementById('agents').value = "";
    
 }
 
@@ -117,4 +115,11 @@ const getAbilities = (abilitiesData) => {
     } catch (error) {
         console.log(error);
     }
+}
+
+const cleanText = (agentValue) => {
+    agentValue = agentValue.replaceAll(" ", "")
+    let result = agentValue.charAt(0).toUpperCase() + agentValue.slice(1).toLowerCase()
+    console.log(result)
+    return result
 }
