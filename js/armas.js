@@ -74,11 +74,30 @@ const getWeaponImage = (mainWeapon) =>{
      }
 }
 
+function getResponsiveFontSize() {
+    const screenWidth = window.innerWidth;
+    if (screenWidth < 600) {
+        return 6; 
+    } else if (screenWidth < 1024) {
+        return 16;
+    } else {
+        return 22;
+    }
+}
+
+window.addEventListener('resize', function() {
+    if (chartWeapon) {
+        const newFontSize = getResponsiveFontSize();
+        chartWeapon.options.scales.r.pointLabels.font.size = newFontSize;
+        chartWeapon.update();
+    }
+});
+
 const ctx = document.getElementById('myChart');
 const getChart = (mainWeapon)=>{
 
     Chart.defaults.font.family = "DIN Next LT Pro Bold";
-    Chart.defaults.font.size = 22;
+    Chart.defaults.font.size = getResponsiveFontSize();
     Chart.defaults.color = "white";
 
     if(chartWeapon){
@@ -87,10 +106,10 @@ const getChart = (mainWeapon)=>{
 
     const data = {
         labels: [
-          'Daño a Cabeza',
-          'Daño al Cuerpo',
+          'Daño a\nCabeza',
+          'Daño al\nCuerpo',
           'Daño a Piernas ',
-          'Tamaño del Cargador',
+          'Tamaño\ndel Cargador',
           'Tiempo de Recarga',
         ],
         datasets: [{
@@ -134,7 +153,11 @@ const getChart = (mainWeapon)=>{
                         },
                         pointLabels: {
                             font: {
-                                size: 20
+                                size: getResponsiveFontSize()
+                            },
+                            callback: function(label) {
+                                // Dividir los labels en varias líneas usando \n
+                                return label.replace(/ /g, '\n'); // Reemplazar espacios con saltos de línea
                             }
                         }
                     }
@@ -157,8 +180,3 @@ const cleanText = (weaponValue) => {
     console.log(result)
     return result
 }
-
-
-
-
-

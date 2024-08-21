@@ -8,6 +8,13 @@
       url("//db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.svg#DIN Next LT Pro Bold") format("svg");
   }
 
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #0F1822;
+}
+
 .main-container{
     display: flex;
     height: calc(100vh - 80px);
@@ -33,6 +40,10 @@
     height: 160px;
 
     
+}
+
+input{
+    background-color: whitesmoke;
 }
 
 label{
@@ -109,6 +120,64 @@ label{
 .name-wpn h3{
     font-size: 2rem;
     color: white;
+}
+
+
+@media (min-width: 421px) and (max-width:768px){
+    body{
+        width: 100dvw;
+        height: auto;
+    }
+    .main-container{
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .image-wpn{
+        width: 100%;
+        height: 400px;
+    }
+    .left-container{
+        width: 100%;
+        height: 150%;
+    }
+    label{
+        font-size: 12pt;
+    }
+    .button-content{
+        font-size: 12pt;
+    }
+}
+
+@media (max-width: 420px){
+    body{
+        width: 100dvw;
+        height: auto;
+    }
+    .main-container{
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .image-wpn{
+        width: 100%;
+        height: 400px;
+    }
+    .left-container{
+        width: 100%;
+        height: 150%;
+    }
+    label{
+        font-size: 12pt;
+    }
+    .button-content{
+        font-size: 12pt;
+    }
+
 }
 
 

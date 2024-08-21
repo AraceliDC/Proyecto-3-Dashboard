@@ -30,3 +30,27 @@
     top: 50%;
     left: 60%;
 }
+
+@media (min-width: 421px) and (max-width: 768px){
+    .right-container{
+        width: 100%;
+        height: 600px;
+    }
+
+    .meleeWarning{
+        top: 125%;
+        left: 20%;
+    }
+}
+
+@media (max-width: 420px){
+    .right-container{
+        width: 100%;
+        height: 600px;
+    }
+
+    .meleeWarning{
+        top: 125%;
+        left: 20%;
+    }
+}
